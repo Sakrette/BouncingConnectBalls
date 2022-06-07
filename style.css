@@ -1,0 +1,59 @@
+html {
+    background-color: black;
+}
+
+#canvas {
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    width: 90vmin;
+    height: 90vmin;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: ghostwhite;
+    display: block;
+}
+
+#navigator {
+    position: absolute;
+    padding: 0;
+    margin: auto;
+    width: 33vmin;
+    height: 90vmin;
+    right: calc(50vw - 45vmin);
+    top: 0;
+    bottom: 0;
+    background-color: #66666666;
+    opacity: 0%;
+}
+
+#navigator:hover {
+    opacity: 100%;
+}
+
+.navi {
+    position: relative;
+    margin-top: 2%;
+    padding-left: 2%;
+}
+.title {
+    font-size: larger;
+}
+.slider {
+    height: 1em;
+}
+.num {
+    width: 17%;
+}
+.longnum {
+    width: 30%;
+}
+
+.indent {
+    padding-left: 10%;
+}
+.hide {
+    opacity: 0;
+}

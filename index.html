@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./script.js" type="text/javascript"></script>
+    <body>
+        <canvas width="1280" height="1280" id="canvas"></canvas>
+        <div id="navigator">
+            <section>
+                <div class="navi">
+                    <label class="title">Boundary</label>
+                </div>
+                <div class="navi">
+                    <label>Range</label>
+                    <input id="range_slider" type="range" class="slider"
+                            min="0" max="360" step="1" value="90"
+                            oninput="range_val.value = Globals.simulator.boundary.angle = parseInt(this.value);"
+                    >
+                    <label>
+                        <input type="number" class="num" id="range_val"
+                            min="0" max="360" step="1" value="90"
+                            oninput="range_slider.value = Globals.simulator.boundary.angle = parseInt(this.value);"
+                        > °</label>
+                </div>
+                <div class="navi">
+                    <label>Height</label>
+                    <input id="height_slider" type="range" class="slider"
+                            min="0" max="50" step="1" value="25"
+                            oninput="height_val.value = Globals.simulator.boundary.height = parseInt(this.value);"
+                    >
+                    <label>
+                        <input id="height_val" type="number" class="num"
+                            min="0" max="50" step="1" value="25"
+                            oninput="height_slider.value = Globals.simulator.boundary.height = parseInt(this.value);"
+                        > %</label>
+                </div>
+                <div class="navi">
+                    <label>Thick</label>
+                    <input id="thick_slider" type="range" class="slider"
+                            min="1" max="20" step="1" value="15"
+                            oninput="thick_val.value = Globals.simulator.boundary.width = parseInt(this.value);"
+                    >
+                    <label>
+                        <input id="thick_val" type="number" class="num"
+                            min="1" max="20" step="1" value="15"
+                            oninput="thick_slider.value = Globals.simulator.boundary.width = parseInt(this.value);"
+                        > px</label>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="navi">
+                    <label class="title">Balls</label>
+                </div>
+                <div class="navi">
+                    <label>Number</label>
+                    <input type="number" class="num"
+                        min="1" max="999" step="1" value="15"
+                        oninput="Globals.simulator.balls.number = parseInt(this.value);"
+                    >
+                </div>
+                <div class="navi">
+                    <label>Size</label>
+                    <input id="size_slider" type="range" class="slider"
+                            min="1" max="20" step="1" value="15"
+                            oninput="size_val.value = Globals.simulator.balls.radius = parseInt(this.value);"
+                    >
+                    <label>
+                        <input id="size_val" type="number" class="num"
+                        min="1" max="20" step="1" value="15"
+                        oninput="size_slider.value = Globals.simulator.balls.radius = parseInt(this.value);"
+                        > px</label>
+                </div>
+                <div class="navi">
+                    <label>Radius</label>
+                    <div class="indent">
+                        <label class="hide">~</label>
+                        <label>
+                            <input id="min_r_val" type="number" class="num"
+                                    min="0" max="100" step="1" value="5"
+                                    oninput="min_r_slider.value = Globals.simulator.balls.min.r = parseInt(this.value);"
+                            > %</label>
+                        <input id="min_r_slider" type="range"
+                                min="0" max="100" step="1" value="5"
+                                oninput="min_r_val.value = Globals.simulator.balls.min.r = parseInt(this.value);"
+                        >
+                    </div>
+                    <div class="indent">
+                        <label>~</label>
+                        <label>
+                            <input id="max_r_val" type="number" class="num"
+                                    min="0" max="100" step="1" value="90"
+                                    oninput="max_r_slider.value = Globals.simulator.balls.max.r = parseInt(this.value);"
+                            > %</label>
+                        <input id="max_r_slider" type="range"
+                                min="0" max="100" step="1" value="90"
+                                oninput="max_r_val.value = Globals.simulator.balls.max.r = parseInt(this.value);"
+                        >
+                    </div>
+                </div>
+                <div class="navi">
+                    <label>Speed</label>
+                    <div class="indent">
+                        <label class="hide">~</label>
+                        <label>
+                            <input id="min_w_val" type="number" class="num"
+                                    min="1" max="720" step="1" value="90"
+                                    oninput="min_w_slider.value = Globals.simulator.balls.min.w = parseInt(this.value);"
+                            > deg/s</label>
+                        <input id="min_w_slider" type="range"
+                                min="1" max="720" step="1" value="90"
+                                oninput="min_w_val.value = Globals.simulator.balls.min.w = parseInt(this.value);"
+                        >
+                    </div>
+                    <div class="indent">
+                        <label>~</label>
+                        <label>
+                            <input id="max_w_val" type="number" class="num"
+                                    min="1" max="720" step="1" value="120"
+                                    oninput="max_w_slider.value = Globals.simulator.balls.max.w = parseInt(this.value);"
+                            > deg/s</label>
+                        <input id="max_w_slider" type="range"
+                                min="1" max="720" step="1" value="120"
+                                oninput="max_w_val.value = Globals.simulator.balls.max.w = parseInt(this.value);"
+                        >
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
